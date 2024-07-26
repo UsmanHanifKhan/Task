@@ -110,13 +110,13 @@ const Home = () => {
 
   return (
     <div className='bg-color'>
-      <div className="container mx-auto lg:px-24 md:px-24 pt-5 pb-5 flex justify-between items-center">
+      <div className="container mx-auto lg:px-24 md:px-24 p-5 pt-5 pb-5 flex justify-between items-center">
         <h1 className="text-2xl font-semibold">Week Orders</h1>
       </div>
       <nav className="bg-white shadow sticky top-0 z-50 p-4">
         <div className="container mx-auto flex flex-wrap lg:px-24">
-          <div className="hidden md:flex flex-wrap items-center space-x-4 mb-4 md:mb-0">
-            <div className="flex space-x-20">
+          <div className="hidden md:flex flex-wrap items-center space-x-4 mb-4 md:mb-0 lg:me-56 md:me-20">
+            <div className="flex lg:space-x-20 md:space-x-12">
               {['All Meals', 'Week 1', 'Week 2', 'Week 3', 'Week 4'].map((label) => (
                 <button
                   key={label}
@@ -133,7 +133,7 @@ const Home = () => {
             </div>
           </div>
           <button
-            className={`bg-blue-900 text-white px-4 py-2 lg:ms-[20rem] md:ms-[20rem] hover:bg-blue-800 ${selectedCard === null ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`bg-blue-900 text-white px-4 py-2  hover:bg-blue-800 ${selectedCard === null ? 'opacity-50 cursor-not-allowed' : ''}`}
             onClick={handleAddToWeekClick}
             disabled={selectedCard === null}
           >
